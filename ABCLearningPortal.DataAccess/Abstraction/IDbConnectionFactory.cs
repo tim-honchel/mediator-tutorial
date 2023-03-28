@@ -1,7 +1,9 @@
-﻿namespace ABCLearningPortal.DataAccess.Abstraction
+﻿using System.Data;
+
+namespace ABCLearningPortal.DataAccess.Abstraction
 {
     public interface IDbConnectionFactory
     {
-        public IDbConnectionFactory NewConnection();
+        public IDbConnection NewConnection();
     }
 }

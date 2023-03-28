@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ABCLearningPortal.DataAccess.Abstraction
 {
@@ -8,6 +9,6 @@ namespace ABCLearningPortal.DataAccess.Abstraction
 
         public Task<TResponse> FetchAsync<TResponse>(IDataRequest<TResponse> request);
 
-        public Task<TResponse> FetchListAsync<TResponse>(IDataRequest<TResponse> request);
+        public Task<IEnumerable<TResponse>> FetchListAsync<TResponse>(IDataRequest<TResponse> request);
     }
 }
